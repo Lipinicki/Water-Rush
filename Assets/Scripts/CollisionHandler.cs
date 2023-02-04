@@ -12,8 +12,6 @@ public class CollisionHandler : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         StartDeathSequence();
-
-        //print($"{this.name} ** has triggered ** {other.gameObject.name}!");
     }
 
     void StartDeathSequence()

@@ -6,15 +6,16 @@ public class Enemy : MonoBehaviour
 {
 	[SerializeField] GameObject deathVFX;
 	[SerializeField] GameObject hitVFX;
-	[SerializeField] Transform parent;
 	[SerializeField] int scorePerHit = 25;
 	[SerializeField] int hitPoints = 1;
 
+	GameObject parentGameObject;
 	ScoreBoard scoreBoard;
 
 	void Start()
 	{
 		scoreBoard = FindObjectOfType<ScoreBoard>();
+		parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
 		AddRigidbody();
 	}
 
@@ -28,10 +29,17 @@ public class Enemy : MonoBehaviour
 		}
 	}
 
+	void AddRigidbody()
+	{
+		Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+		rb.useGravity = false;
+		rb.isKinematic = true;
+	}
+
 	void ProcessHit()
 	{
 		GameObject vfx = Instantiate(hitVFX, transform.position, transform.rotation);
-		vfx.transform.parent = parent;
+		vfx.transform.parent = parentGameObject.transform;
 
 		scoreBoard.IncreaseScore(scorePerHit);
 		hitPoints--;
@@ -40,15 +48,8 @@ public class Enemy : MonoBehaviour
 	void KillEnemy()
 	{
 		GameObject vfx = Instantiate(deathVFX, transform.position, transform.rotation);
-		vfx.transform.parent = parent;
+		vfx.transform.parent = parentGameObject.transform;
 
 		Destroy(this.gameObject);
-	}
-
-	void AddRigidbody()
-	{
-		Rigidbody rb = gameObject.AddComponent<Rigidbody>();
-		rb.useGravity = false;
-		rb.isKinematic = true;
 	}
 }
