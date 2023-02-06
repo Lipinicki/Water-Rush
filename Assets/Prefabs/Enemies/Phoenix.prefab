@@ -185,7 +185,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathVFX: {fileID: 1076000884313493806, guid: 549aaf87915802b4fbedd83d00f3de06, type: 3}
   hitVFX: {fileID: 3358416348601671467, guid: 2433dd482c6c13e4db9cfb92bb76e5e4, type: 3}
-  parent: {fileID: 0}
   scorePerHit: 100
   hitPoints: 1
 --- !u!1 &759078931359602523
@@ -1159,8 +1158,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6295545045931145973}
   m_LocalRotation: {x: -0.016519237, y: -0, z: -0, w: 0.9998636}
-  m_LocalPosition: {x: 0, y: 0, z: 0.93696594}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.51384, z: 0.87489}
+  m_LocalScale: {x: 5.2470016, y: 5.52547, z: 1}
   m_Children: []
   m_Father: {fileID: 5173733414393628231}
   m_RootOrder: 1
@@ -1176,8 +1175,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1280515, y: 0.71514803, z: 5.757826}
-  m_Center: {x: 0, y: -0.13213134, z: 1.5574371}
+  m_Size: {x: 1.1280515, y: 0.68728805, z: 5.7578254}
+  m_Center: {x: 0, y: -0.11817181, z: 1.5506958}
 --- !u!1 &6295993888577422285
 GameObject:
   m_ObjectHideFlags: 0
