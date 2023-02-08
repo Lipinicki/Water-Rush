@@ -572,6 +572,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -377023519207088999, guid: d0223a01f4862a34996c5f919ca3e6d3, type: 3}
+      propertyPath: m_Size.x
+      value: 10.002395
+      objectReference: {fileID: 0}
+    - target: {fileID: -377023519207088999, guid: d0223a01f4862a34996c5f919ca3e6d3, type: 3}
+      propertyPath: m_Center.y
+      value: -0.0000029802325
+      objectReference: {fileID: 0}
     - target: {fileID: 541199076774624097, guid: d0223a01f4862a34996c5f919ca3e6d3, type: 3}
       propertyPath: m_Name
       value: Phoenix

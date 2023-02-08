@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-	[SerializeField] GameObject deathVFX;
+	[SerializeField] GameObject deathFX;
 	[SerializeField] GameObject hitVFX;
 	[SerializeField] int scorePerHit = 25;
 	[SerializeField] int hitPoints = 1;
@@ -31,9 +31,12 @@ public class Enemy : MonoBehaviour
 
 	void AddRigidbody()
 	{
-		Rigidbody rb = gameObject.AddComponent<Rigidbody>();
-		rb.useGravity = false;
-		rb.isKinematic = true;
+		if (GetComponent<Collider>() == null)
+		{
+			Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+			rb.useGravity = false;
+			rb.isKinematic = true;
+		}
 	}
 
 	void ProcessHit()
@@ -48,8 +51,8 @@ public class Enemy : MonoBehaviour
 	{
 		scoreBoard.IncreaseScore(scorePerHit);
 
-		GameObject vfx = Instantiate(deathVFX, transform.position, transform.rotation);
-		vfx.transform.parent = parentGameObject.transform;
+		GameObject fx = Instantiate(deathFX, transform.position, transform.rotation);
+		fx.transform.parent = parentGameObject.transform;
 
 		Destroy(this.gameObject);
 	}

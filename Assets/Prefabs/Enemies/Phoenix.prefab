@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 573081067697970353}
   - component: {fileID: 564766644506320439}
   - component: {fileID: 7350897583300785153}
+  - component: {fileID: -377023519207088999}
   m_Layer: 0
   m_Name: Phoenix
   m_TagString: Untagged
@@ -183,10 +184,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df87c321409581b4ebfd56282fff7b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 1076000884313493806, guid: 549aaf87915802b4fbedd83d00f3de06, type: 3}
+  deathFX: {fileID: 1076000884313493806, guid: 549aaf87915802b4fbedd83d00f3de06, type: 3}
   hitVFX: {fileID: 3358416348601671467, guid: 2433dd482c6c13e4db9cfb92bb76e5e4, type: 3}
   scorePerHit: 100
   hitPoints: 1
+--- !u!65 &-377023519207088999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541199076774624097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.228247, y: 4.267086, z: 11.603618}
+  m_Center: {x: 0, y: -0.0000029802322, z: 0}
 --- !u!1 &759078931359602523
 GameObject:
   m_ObjectHideFlags: 0
@@ -686,7 +700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5173733414393628231
 Transform:
   m_ObjectHideFlags: 0

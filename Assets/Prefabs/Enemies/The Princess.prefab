@@ -350,8 +350,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1280516, y: 0.56981575, z: 5.593294}
-  m_Center: {x: 0, y: -0.05946525, z: 1.4751635}
+  m_Size: {x: 2.355171, y: 0.7536956, z: 5.593294}
+  m_Center: {x: 0, y: -0.031012606, z: 1.4747545}
 --- !u!1 &3108772960065208297
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,10 +1033,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df87c321409581b4ebfd56282fff7b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 1076000884313493806, guid: 549aaf87915802b4fbedd83d00f3de06, type: 3}
+  deathFX: {fileID: 1076000884313493806, guid: 549aaf87915802b4fbedd83d00f3de06, type: 3}
   hitVFX: {fileID: 3358416348601671467, guid: 2433dd482c6c13e4db9cfb92bb76e5e4, type: 3}
   scorePerHit: 80
-  hitPoints: 120
+  hitPoints: 150
 --- !u!1 &7356275955020992906
 GameObject:
   m_ObjectHideFlags: 0
