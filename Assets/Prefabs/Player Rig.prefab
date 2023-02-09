@@ -162,6 +162,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4024849840426700831}
     m_Modifications:
+    - target: {fileID: 2142673310703629916, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142673310703629916, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142673310703629916, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4487541928777009180, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
       propertyPath: m_Name
       value: Player Ship

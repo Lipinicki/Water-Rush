@@ -7,7 +7,16 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] float reloadTime = 1f;
-    [SerializeField] ParticleSystem crashVFX;
+    [SerializeField] GameObject crashVFX;
+
+    PlayerController playerController;
+    Collider playerCollider;
+
+    void Start()
+    {
+        playerController = GetComponent<PlayerController>();
+        playerCollider = GetComponent<Collider>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -16,10 +25,11 @@ public class CollisionHandler : MonoBehaviour
 
     void StartDeathSequence()
     {
-        GetComponent<PlayerController>().enabled = false;
-        GetComponent<Collider>().enabled = false;
+        playerController.enabled = false;
+        playerCollider.enabled = false;
+
         DisableMeshRenderers();
-        crashVFX.Play();
+        crashVFX.SetActive(true);
         Invoke(nameof(ReloadLevel), reloadTime);
     }
 

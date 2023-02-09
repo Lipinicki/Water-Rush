@@ -11,11 +11,13 @@ public class Enemy : MonoBehaviour
 
 	GameObject parentGameObject;
 	ScoreBoard scoreBoard;
+	AudioSource enemyAudio;
 
 	void Start()
 	{
 		scoreBoard = FindObjectOfType<ScoreBoard>();
 		parentGameObject = GameObject.FindWithTag("SpawnAtRuntime");
+		enemyAudio = GetComponent<AudioSource>();
 		AddRigidbody();
 	}
 
@@ -43,6 +45,8 @@ public class Enemy : MonoBehaviour
 	{
 		GameObject vfx = Instantiate(hitVFX, transform.position, transform.rotation);
 		vfx.transform.parent = parentGameObject.transform;
+
+		enemyAudio.Play();
 
 		hitPoints--;
 	}

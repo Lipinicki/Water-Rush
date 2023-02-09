@@ -40,10 +40,12 @@ public class PlayerController : MonoBehaviour
 	Vector2 currentInputVector;
 	Vector2 smoothInputVelocity; // Just used to reference the currentInputVector smooth velocity
 
+	AudioSource playerAudio;
+
 	// Start is called before the first frame update
 	void Start()
 	{
-
+		playerAudio = GetComponent<AudioSource>();
 	}
 
 	void OnEnable()
@@ -55,7 +57,7 @@ public class PlayerController : MonoBehaviour
 	void OnDisable()
 	{
 		movementAction.Disable();
-		fireAction.Disable();	
+		fireAction.Disable();
 	}
 
 	// Update is called once per frame
@@ -124,10 +126,14 @@ public class PlayerController : MonoBehaviour
 		if (fire)
 		{
 			SetLasersActive(true);
+
+			if (!playerAudio.isPlaying) playerAudio.Play();
 		}
 		else
 		{
 			SetLasersActive(false);
+
+			if (playerAudio.isPlaying) playerAudio.Stop();
 		}
 	}
 
