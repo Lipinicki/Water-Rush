@@ -11,7 +11,7 @@ public class ScoreBoard : MonoBehaviour
     void Start()
     {
         scoreText = GetComponent<TMP_Text>();
-        scoreText.text = "Start";
+        scoreText.text = "" + 0;
     }
 
     public void IncreaseScore(int amoutToIncrease)
