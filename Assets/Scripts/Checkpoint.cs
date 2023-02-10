@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
+    [SerializeField] CheckpointScriptableObject checkpointData;
+
     PlayableDirector playableDirector;
 
-    void Start()
+    void Awake()
     {
         playableDirector = GetComponent<PlayableDirector>();
+
+        playableDirector.time = checkpointData.currentInitialTime;
     }
-    
-    
 
-    void SetCheckpointAt(int time)
+    public void SetCheckpointAt(int time)
     {
-
+        checkpointData.currentInitialTime = time;
     }
 }

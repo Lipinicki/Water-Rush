@@ -924,6 +924,7 @@ GameObject:
   - component: {fileID: 707405986}
   - component: {fileID: 707405985}
   - component: {fileID: 707405987}
+  - component: {fileID: 707405988}
   m_Layer: 0
   m_Name: Master Timeline
   m_TagString: Untagged
@@ -944,7 +945,7 @@ PlayableDirector:
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
-  m_InitialTime: 60
+  m_InitialTime: 0
   m_SceneBindings:
   - key: {fileID: 8323832304634667210, guid: d2dead5254b340647be431de516615d2, type: 2}
     value: {fileID: 2088276996}
@@ -1079,6 +1080,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ae56eb278450b45bb650c5a0e4029f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointData: {fileID: 11400000, guid: 449083c2853e4b4499a207feeb66c1de, type: 2}
+--- !u!114 &707405988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707405984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 6071cf649b5149d4e82a946b49a9f339, type: 2}
+    - {fileID: 11400000, guid: f55d40ae634323141a978f7e37c7ec30, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 707405987}
+          m_TargetAssemblyTypeName: Checkpoint, Assembly-CSharp
+          m_MethodName: SetCheckpointAt
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 60
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 707405987}
+          m_TargetAssemblyTypeName: Checkpoint, Assembly-CSharp
+          m_MethodName: SetCheckpointAt
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &756428103
 GameObject:
   m_ObjectHideFlags: 0
