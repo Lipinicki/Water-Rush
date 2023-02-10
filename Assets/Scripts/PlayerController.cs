@@ -41,12 +41,16 @@ public class PlayerController : MonoBehaviour
 	Vector2 smoothInputVelocity; // Just used to reference the currentInputVector smooth velocity
 
 	AudioSource playerAudio;
+	List<ParticleSystem> particleSystems = new List<ParticleSystem>();
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		playerAudio = GetComponent<AudioSource>();
+
+		GetParticleSystems();
 	}
+
 
 	void OnEnable()
 	{
@@ -69,6 +73,14 @@ public class PlayerController : MonoBehaviour
 		ProcessFiring();
 
 		//print(xThrow + ", " + yThrow);
+	}
+
+	private void GetParticleSystems()
+	{
+		foreach (var laser in lasers)
+		{
+			particleSystems.Add(laser.GetComponent<ParticleSystem>());
+		}
 	}
 
 	void ProcessTranslation()
@@ -139,9 +151,9 @@ public class PlayerController : MonoBehaviour
 
 	void SetLasersActive(bool isActive)
 	{
-		foreach (var laser in lasers)
+		foreach (var laser in particleSystems)
 		{
-			var laserEmission = laser.GetComponent<ParticleSystem>().emission;
+			var laserEmission = laser.emission;
 			laserEmission.enabled = isActive;
 		}
 	}

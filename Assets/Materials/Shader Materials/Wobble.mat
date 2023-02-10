@@ -33,5 +33,5 @@ Material:
     - _Speed: 0.65
     m_Colors:
     - <noninit>: {r: 0, g: 2.0183642, b: 1e-45, a: -1.6493598e+13}
-    - _Color: {r: 0.40943396, g: 0.97452444, b: 1, a: 0}
+    - _Color: {r: 0.63584906, g: 0.867906, b: 1, a: 0}
   m_BuildTextureStacks: []

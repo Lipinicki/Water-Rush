@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4024849839303584111}
   - component: {fileID: 4024849839303584110}
   - component: {fileID: 6334927471207267330}
+  - component: {fileID: 5803221027199467062}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -97,12 +98,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Wobble: {fileID: 2100000, guid: d71fa1ab5a008b04098eb85872e264af, type: 2}
-  underwaterColor: {r: 0.40943396, g: 0.97452444, b: 1, a: 0}
+  underwaterColor: {r: 0.4078431, g: 0.78272384, b: 1, a: 0}
   Blend: 0
   multiply: {fileID: 4800000, guid: 4616dba0fcbb2734895383d1cbbb9e5f, type: 3}
   overlay: {fileID: 4800000, guid: 248bbca4a4b462c48ab8721daca64412, type: 3}
   screen: {fileID: 4800000, guid: eee2cf16b7a970b4a9b8ed9d63ede4b8, type: 3}
   effectActive: 1
+--- !u!114 &5803221027199467062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4024849839303584109}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 4024849839303584104}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 1
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &4024849840426700830
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,8 +229,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2142673310703629916, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
       propertyPath: m_Volume
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 2142673310703629916, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4015ab28a9fac924cace917442a00892, type: 3}
     - target: {fileID: 2142673310703629916, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
