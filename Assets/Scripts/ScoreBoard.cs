@@ -5,23 +5,38 @@ using TMPro;
 
 public class ScoreBoard : MonoBehaviour
 {
-    int score;
+    [SerializeField] IntScriptableObject score;
+    [SerializeField] IntScriptableObject checkpointScore;
+
     TMP_Text scoreText;
 
     void Start()
     {
         scoreText = GetComponent<TMP_Text>();
-        scoreText.text = "" + 0;
+        score.Value = checkpointScore.Value;
+        scoreText.text = score.Value.ToString();
     }
 
     public void IncreaseScore(int amoutToIncrease)
     {
-        score += amoutToIncrease;
+        score.Value += amoutToIncrease;
         UpdateScoreUI();
+    }
+
+    public void ResetScore()
+    {
+        checkpointScore.Value = 0;
+    }
+
+    public void UpdateCheckpointScore()
+    {
+        checkpointScore.Value = score.Value;
+        print("Event!!");
     }
 
     void UpdateScoreUI()
     {
-        scoreText.text = score.ToString();
+        scoreText.text = score.Value.ToString();
     }
+
 }

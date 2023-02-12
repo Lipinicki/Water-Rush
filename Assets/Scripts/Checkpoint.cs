@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour
 {
-    [SerializeField] CheckpointScriptableObject checkpointData;
+    [SerializeField] IntScriptableObject checkpointData;
 
     PlayableDirector playableDirector;
 
@@ -14,11 +14,11 @@ public class Checkpoint : MonoBehaviour
     {
         playableDirector = GetComponent<PlayableDirector>();
 
-        playableDirector.time = checkpointData.currentInitialTime;
+        playableDirector.time = checkpointData.Value;
     }
 
     public void SetCheckpointAt(int time)
     {
-        checkpointData.currentInitialTime = time;
+        checkpointData.Value = time;
     }
 }
