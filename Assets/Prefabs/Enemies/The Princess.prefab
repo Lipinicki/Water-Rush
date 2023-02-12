@@ -1036,7 +1036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1076000884313493806, guid: 549aaf87915802b4fbedd83d00f3de06, type: 3}
   hitVFX: {fileID: 3358416348601671467, guid: 2433dd482c6c13e4db9cfb92bb76e5e4, type: 3}
-  scorePerHit: 80
+  scorePerDeath: 3000
   hitPoints: 150
 --- !u!82 &2805516587675976307
 AudioSource:

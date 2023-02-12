@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d025f0aa244bf242a1ea85ae7f84117, type: 3}
   m_Name: New CheckpointData
   m_EditorClassIdentifier: 
-  currentInitialTime: 30
+  currentInitialTime: 0
