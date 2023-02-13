@@ -7,19 +7,22 @@ public class SceneLoader : MonoBehaviour
 {
     [SerializeField] Animator animator;
 
+    int sceneToLoadIndex;
+    
     public void QuitGame()
     {
         Application.Quit();
         print("Quit!");
     }
 
-    public void FadeToScene()
+    public void FadeToScene(int levelIndex)
     {
+        sceneToLoadIndex = levelIndex;
         animator.SetTrigger("FadeOut");   
     }
 
-    public void OnFadeComplete(int levelIndex)
+    public void OnFadeComplete()
     {
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(sceneToLoadIndex);
     }
 }
