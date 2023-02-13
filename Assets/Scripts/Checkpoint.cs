@@ -21,4 +21,9 @@ public class Checkpoint : MonoBehaviour
     {
         checkpointData.Value = time;
     }
+
+    public void ResetCheckpoint()
+    {
+        checkpointData.Value = 0;
+    }
 }

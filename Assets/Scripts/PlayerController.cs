@@ -1,13 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Playables;
 
 public class PlayerController : MonoBehaviour
 {
 	[Header("Input Actions")]
 	[SerializeField] InputAction movementAction;
 	[SerializeField] InputAction fireAction;
+	[SerializeField] InputAction pauseAction;
 
 	[Header("Movement Settings")]
 	[Tooltip("How fast player moves on x and y axis based on input")]
@@ -36,6 +39,10 @@ public class PlayerController : MonoBehaviour
 	[Tooltip("Rotation in z modifier calculated with player's input")]
 	[SerializeField] float controlRollFactor = -10f;
 
+	[Header("Pause Settings")]
+	[SerializeField] PlayableDirector playableDirector;
+	[SerializeField] GameObject pauseGameObject;
+
 	float xThrow, yThrow; // Input values	
 	Vector2 currentInputVector;
 	Vector2 smoothInputVelocity; // Just used to reference the currentInputVector smooth velocity
@@ -56,12 +63,14 @@ public class PlayerController : MonoBehaviour
 	{
 		movementAction.Enable();
 		fireAction.Enable();
+		pauseAction.Enable();
 	}
 
 	void OnDisable()
 	{
 		movementAction.Disable();
 		fireAction.Disable();
+		pauseAction.Disable();
 	}
 
 	// Update is called once per frame
@@ -71,8 +80,7 @@ public class PlayerController : MonoBehaviour
 		ProcessTranslation();
 		ProcessRotation();
 		ProcessFiring();
-
-		//print(xThrow + ", " + yThrow);
+		ProcessPause();
 	}
 
 	private void GetParticleSystems()
@@ -156,5 +164,28 @@ public class PlayerController : MonoBehaviour
 			var laserEmission = laser.emission;
 			laserEmission.enabled = isActive;
 		}
+	}
+
+
+	void ProcessPause()
+	{
+		bool pause = pauseAction.ReadValue<float>() > 0.1f;
+
+		if (pause)
+		{
+			PauseGame();
+		}
+	}
+
+	void PauseGame()
+	{
+		playableDirector.Pause();
+		pauseGameObject.SetActive(true);
+	}
+
+	public void UnpauseGame()
+	{
+		playableDirector.Play();
+		pauseGameObject.SetActive(false);
 	}
 }

@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2215902791136682254, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 347562302506667154, guid: d08ec116f5dda7b4ca905061a8a77f67, type: 2}
     - target: {fileID: 4487541928777009180, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
       propertyPath: m_Name
       value: Player Ship
@@ -300,6 +304,10 @@ PrefabInstance:
       value: b37340fe-80dd-4c8c-82bc-0a78fa71d463
       objectReference: {fileID: 0}
     - target: {fileID: 8569846643385813849, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
+      propertyPath: pauseAction.m_Id
+      value: e9cae7de-f0b9-41fc-8b50-28558893304a
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569846643385813849, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
       propertyPath: controlRollFactor
       value: -20
       objectReference: {fileID: 0}
@@ -314,6 +322,10 @@ PrefabInstance:
     - target: {fileID: 8569846643385813849, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
       propertyPath: positionYawFactor
       value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8569846643385813849, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
+      propertyPath: pauseAction.m_Name
+      value: Pause
       objectReference: {fileID: 0}
     - target: {fileID: 8569846643385813849, guid: 3896fbe6743600f4e9b4de08feb03c0d, type: 3}
       propertyPath: movementAction.m_Id

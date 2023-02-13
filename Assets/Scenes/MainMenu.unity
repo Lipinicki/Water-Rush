@@ -611,6 +611,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1626907105}
+    - target: {fileID: 1582362039796595197, guid: 1e0ed8a4c00dedd41af6e51a141ee65e, type: 3}
+      propertyPath: m_Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1582362039796595197, guid: 1e0ed8a4c00dedd41af6e51a141ee65e, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5581296685240026471, guid: d08ec116f5dda7b4ca905061a8a77f67, type: 2}
     - target: {fileID: 8407356411137396029, guid: 1e0ed8a4c00dedd41af6e51a141ee65e, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

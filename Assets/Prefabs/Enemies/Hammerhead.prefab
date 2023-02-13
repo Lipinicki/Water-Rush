@@ -680,7 +680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1076000884313493806, guid: 549aaf87915802b4fbedd83d00f3de06, type: 3}
   hitVFX: {fileID: 3358416348601671467, guid: 2433dd482c6c13e4db9cfb92bb76e5e4, type: 3}
-  scorePerHit: 35
+  scorePerDeath: 100
   hitPoints: 20
 --- !u!65 &-1756787215331828380
 BoxCollider:
@@ -704,7 +704,7 @@ AudioSource:
   m_GameObject: {fileID: 4248129089106011524}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 347562302506667154, guid: d08ec116f5dda7b4ca905061a8a77f67, type: 2}
   m_audioClip: {fileID: 8300000, guid: c41d041399a257f4599cd183fd5d47b8, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.4

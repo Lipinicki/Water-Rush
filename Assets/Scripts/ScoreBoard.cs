@@ -23,15 +23,20 @@ public class ScoreBoard : MonoBehaviour
         UpdateScoreUI();
     }
 
-    public void ResetScore()
+    public void ResetCheckpointScore()
     {
         checkpointScore.Value = 0;
+    }
+
+    public void ResetScore()
+    {
+        ResetCheckpointScore();
+        score.Value = checkpointScore.Value;
     }
 
     public void UpdateCheckpointScore()
     {
         checkpointScore.Value = score.Value;
-        print("Event!!");
     }
 
     void UpdateScoreUI()
