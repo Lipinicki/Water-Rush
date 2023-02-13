@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.07714489, g: 0.17441198, b: 0.20754719, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.01
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 0b83af1e031cee045895bd9201062ee3, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 1f9089046f7f79c45a1ee203392b8614, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 479bf584e4ab8d04fa28f2d6189e3d3e, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -1082,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_Intensity
@@ -1098,11 +1098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: 1e-45
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 2.093e-41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_BoundingSphereOverride.z
@@ -1609,6 +1609,11 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!95 &735287266 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4382440618869728693, guid: 5fe54deea3ba9f04ea011e2822f91d24, type: 3}
+  m_PrefabInstance: {fileID: 1617928094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &756428103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2853,22 @@ PrefabInstance:
       propertyPath: m_InitialState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4382440619902604061, guid: 5fe54deea3ba9f04ea011e2822f91d24, type: 3}
+      propertyPath: m_PlayableAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: fa28f5dd292658a45afeb983819b5627, type: 2}
+    - target: {fileID: 4382440619902604061, guid: 5fe54deea3ba9f04ea011e2822f91d24, type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382440619902604061, guid: 5fe54deea3ba9f04ea011e2822f91d24, type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].key
+      value: 
+      objectReference: {fileID: -4830119321886411587, guid: fa28f5dd292658a45afeb983819b5627, type: 2}
+    - target: {fileID: 4382440619902604061, guid: 5fe54deea3ba9f04ea011e2822f91d24, type: 3}
+      propertyPath: m_SceneBindings.Array.data[1].value
+      value: 
+      objectReference: {fileID: 735287266}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fe54deea3ba9f04ea011e2822f91d24, type: 3}
 --- !u!4 &1617928095 stripped
@@ -4189,11 +4210,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6334927471207267330, guid: 4dcef514fd65a7e4b809cd2d00deeb36, type: 3}
       propertyPath: underwaterColor.g
-      value: 0.867906
+      value: 0.73503155
       objectReference: {fileID: 0}
     - target: {fileID: 6334927471207267330, guid: 4dcef514fd65a7e4b809cd2d00deeb36, type: 3}
       propertyPath: underwaterColor.r
-      value: 0.63584906
+      value: 0.27735847
       objectReference: {fileID: 0}
     - target: {fileID: 7120094369131622660, guid: 4dcef514fd65a7e4b809cd2d00deeb36, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -5160,6 +5181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6965115894951005903, guid: 8db5652d905adfa4194c3df51930f873, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8391169925721369291, guid: 8db5652d905adfa4194c3df51930f873, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -5240,7 +5265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7748023982075131501, guid: 8ba9c8c1ae77bdb4b9f056c0ff747f69, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7748023982075131502, guid: 8ba9c8c1ae77bdb4b9f056c0ff747f69, type: 3}
       propertyPath: m_Name
@@ -5606,15 +5631,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1.04e-43
+      value: -4.656613e-10
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 1.7e-44
+      value: 8.733e-42
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642533, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 2.66e-42
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8245454316296642534, guid: e60ab2997f38ec64ea7f4677f93b2cc7, type: 3}
       propertyPath: m_Name
